@@ -1,5 +1,8 @@
 jumphash - service to hash password
 ===================================
+To start the program, run the following command:
+`make run` - this gets the dependencies, builds a binary, and runs the built binary with the defaults
+
 There are two packages included in this repository:
 
 main
@@ -7,8 +10,9 @@ main
 The `main` package is the glue that creates a hashing server. In includes starting a new [echo](https://github.com/labstack/echo) server to handle routing
 and middleware usage. The main executable can take two arguments:
 
-* addr
-* sleep
+* addr - a tcp address to listen on in the form of <interface>:<port>. The default is the 
+127.0.0.1 loopback interface and 8080 as the port.
+* sleep - the number of seconds to sleep during each request. The default is 5
 
 server
 ------
