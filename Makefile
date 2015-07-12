@@ -5,5 +5,5 @@ build:
 	go get github.com/tylerb/graceful
 	go build
 
-run:
+run: build
 	./jumphash
